@@ -8,10 +8,16 @@ package main
 
 import (
 	"matching"
+	"server"
+	"client"
 	"julia"
 )
 
 func main() {
-	matching.Main()
-	julia.Main()
+	go matching.Main()
+	go julia.Main()
+	go server.Main()
+	go client.Main()
+
+	select {}
 }
