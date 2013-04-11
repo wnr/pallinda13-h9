@@ -6,8 +6,12 @@
  */
 package main
 
-import "matching"
+import (
+	"matching"
+	"julia"
+)
 
 func main() {
 	matching.Main()
+	julia.Main()
 }
