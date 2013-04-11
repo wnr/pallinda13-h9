@@ -24,7 +24,7 @@ import (
 // receiving by any number of goroutines. It also shows how  the select
 // statement can be used to choose one out of several communications.
 func Main() {
-	people := []string{"Anna", "Bob", "Cody", "Dave", "Eva", "lucas"}
+	people := []string{"Anna", "Bob", "Cody", "Dave", "Eva"}
 	match := make(chan string, 1) // Make room for one unmatched send.
 	wg := new(sync.WaitGroup)
 	wg.Add(len(people))
